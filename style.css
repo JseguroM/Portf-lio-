@@ -1,0 +1,151 @@
+/* style.css */
+
+/* Reset básico para todos os elementos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo do corpo da página */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Menu fixo no topo da página */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 1px solid #e0e0e0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  z-index: 1000;
+}
+
+/* Lista do menu com display flex para alinhar os itens */
+.menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+/* Itens do menu com espaçamento */
+.menu li {
+  margin: 0 1.5rem;
+}
+
+/* Estilo dos links do menu */
+.menu li a {
+  text-decoration: none;
+  color: #007acc; /* Cor azul para links */
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+/* Efeito de mudança de cor quando o mouse passa */
+.menu li a:hover {
+  color: #005f99;
+}
+
+/* Espaço para o conteúdo para não ficar escondido atrás do menu fixo */
+.main-content {
+  padding: 80px 20px 40px; /* topo, laterais, fundo */
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Estilo dos títulos */
+h1, h2 {
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+/* Parágrafos com espaçamento */
+p {
+  margin-bottom: 1rem;
+}
+
+/* Estilo do formulário de contato */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Inputs e textarea com estilo simples */
+input[type="text"],
+input[type="email"],
+textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+/* Botão de enviar */
+button {
+  width: 150px;
+  padding: 10px;
+  background-color: #007acc;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Efeito hover no botão */
+button:hover {
+  background-color: #005f99;
+}
+
+.foto-perfil {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin: 20px auto;
+}
+
+footer {
+  text-align: center;
+}
+
+.fotos-hobbies {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.foto-hobby {
+  width: 300px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+/* Responsividade básica */
+@media (max-width: 600px) {
+  .menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu li {
+    margin: 10px 0;
+  }
+
+  .main-content {
+    padding: 100px 15px 20px;
+  }
+}
